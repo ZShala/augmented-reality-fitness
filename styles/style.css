@@ -1,0 +1,56 @@
+body {
+    background-color: rgb(14, 14, 14);
+}
+
+button {
+    position: absolute;
+    margin-top: 150px;
+    margin-left: -460px;
+    background-color: transparent;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bolder;
+    transition-duration: 0.4s;
+    cursor: pointer
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0)
+}
+
+#imglogo {
+    position: relative;
+    margin-left: 350px
+}
+
+#imgsquat1 {
+    position: absolute;
+    margin-top: 330px;
+    margin-left: 200px
+}
+
+#imgsquat2 {
+    position: absolute;
+    margin-top: 320px;
+    margin-left: -830px
+}
+
+#imgsquat3 {
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 800px
+}
+
+h2 {
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 720px;
+    color: rgb(255, 255, 255)
+}
