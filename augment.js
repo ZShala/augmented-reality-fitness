@@ -5,12 +5,12 @@ let skeleton;
 
 function setup() {
     createCanvas(640, 480);
-    video = createCapture(VIDEO);
+    video = createCapture(VIDEO); // funksion i p5.js i cili mundëson krijimin e video elementit
     video.hide();
-    poseNet = ml5.poseNet(video, () => {
+    poseNet = ml5.poseNet(video, () => { // ml5.js do të përdoret për të ngarkuar modelin PoseNet
         console.log('poseNet ready');
     });
-    poseNet.on('pose', (poses) => {
+    poseNet.on('pose', (poses) => { // ky funksion ekzekutohet sa herë që detektohet një pozë e re
         // console.log(poses);
         if (poses.length > 0) {
             pose = poses[0].pose;
@@ -31,7 +31,7 @@ function draw() {
         var a2 = Math.atan2(dy2, dx2);
         var a = parseInt((a2 - a1) * 180 / Math.PI + 360) % 360;
         // console.log(a)
-        if (a >= 60 && a <= 90) {
+        if (a >= 100 && a <= 185) {
             for (let i = 0; i < pose.keypoints.length; i++) {
                 let x = pose.keypoints[i].position.x;
                 let y = pose.keypoints[i].position.y;
