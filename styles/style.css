@@ -1,3 +1,7 @@
+body {
+    min-height: 100%;
+}
+
 .container {
     display: flex;
     flex-direction: column
@@ -24,26 +28,15 @@
     margin-top: 9%;
 }
 
-@media only screen and (max-width: 700px) {
-    #imgsquat1 {
-        display: none
-    }
+canvas {
+    display: flex;
+    margin: 70px auto;
 }
 
 #imgsquat2 {
     display: flex;
     margin-top: 8%;
     margin-left: 65%
-}
-
-@media only screen and (max-width: 700px) {
-    #imgsquat2 {
-        display: flex;
-        margin-top: 30%;
-        margin-left: 33%;
-        width: 35%;
-        height: 35%
-    }
 }
 
 body {
@@ -56,13 +49,6 @@ h1 {
     margin-top: -10%;
     margin-right: 8%;
     color: whitesmoke;
-}
-
-@media only screen and (max-width: 700px) {
-    h1 {
-        margin-top: -25%;
-        font-size: 2vh
-    }
 }
 
 button {
@@ -88,11 +74,4 @@ button:hover {
     background-color: rgb(255, 255, 255);
     border: 2px solid rgb(255, 255, 255);
     color: rgb(0, 0, 0)
-}
-
-@media only screen and (max-width: 600px) {
-    button {
-        width: 80%;
-        padding: 5px 0
-    }
 }
