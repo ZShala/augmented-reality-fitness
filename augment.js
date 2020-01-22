@@ -1,17 +1,16 @@
-let video;
-let poseNet;
+let camera;
+let model;
 let pose;
 let skeleton;
 
 function setup() {
     createCanvas(640, 480);
-    video = createCapture(VIDEO); // funksion i p5.js i cili mundëson krijimin e video elementit
-    video.hide();
-    poseNet = ml5.poseNet(video, () => { // ml5.js do të përdoret për të ngarkuar modelin PoseNet
-        console.log('poseNet ready');
+    camera = createCapture(VIDEO);
+    camera.hide();
+    model = ml5.poseNet(camera, () => {
+        console.log('PoseNet Model Loaded');
     });
-    poseNet.on('pose', (poses) => { // ky funksion ekzekutohet sa herë që detektohet një pozë e re
-        // console.log(poses);
+    model.on('pose', (poses) => {
         if (poses.length > 0) {
             pose = poses[0].pose;
             skeleton = poses[0].skeleton;
@@ -20,17 +19,17 @@ function setup() {
 }
 
 function draw() {
-    image(video, 0, 0);
+    image(camera, 0, 0);
 
     if (pose) {
-        var dx1 = pose.rightHip.x - pose.rightKnee.x;
-        var dy1 = pose.rightHip.y - pose.rightKnee.y;
-        var dx2 = pose.rightKnee.x - pose.rightAnkle.x;
-        var dy2 = pose.rightKnee.y - pose.rightAnkle.y;
-        var a1 = Math.atan2(dy1, dx1);
-        var a2 = Math.atan2(dy2, dx2);
-        var a = parseInt((a2 - a1) * 180 / Math.PI + 360) % 360;
-        // console.log(a)
+        let dx1 = pose.rightHip.x - pose.rightKnee.x;
+        let dy1 = pose.rightHip.y - pose.rightKnee.y;
+        let dx2 = pose.rightKnee.x - pose.rightAnkle.x;
+        let dy2 = pose.rightKnee.y - pose.rightAnkle.y;
+        let a1 = Math.atan2(dy1, dx1);
+        let a2 = Math.atan2(dy2, dx2);
+        let a = parseInt((a2 - a1) * 180 / Math.PI + 360) % 360;
+
         if (a >= 100 && a <= 185) {
             for (let i = 0; i < pose.keypoints.length; i++) {
                 let x = pose.keypoints[i].position.x;
@@ -58,7 +57,7 @@ function draw() {
             for (let i = 0; i < skeleton.length; i++) {
                 let a = skeleton[i][0];
                 let b = skeleton[i][1];
-                strokeWeight(2);
+                strokeWeight(1);
                 stroke(255, 0, 0);
                 line(a.position.x, a.position.y, b.position.x, b.position.y);
             }
