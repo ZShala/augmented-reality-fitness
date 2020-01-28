@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Squat Pose Estimation</title>
+    <link rel="icon" type="image/ico" href="images/ar-icon.png" />
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel=stylesheet href="styles/style.css" type="text/css">
+    <link rel=stylesheet href="styles/modal.css" type="text/css">
+    <link rel=stylesheet href="styles/styleMQ.css" type="text/css">
+
+</head>
+
+<body>
+
+    <button id="myBtn">Exercise Instructions</button>
+
+    <div id="myModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="images/wrong-pose.jpg">
+            <img src="images/correct-pose.jpg" style="float:right">
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.2/dist/ml5.min.js"></script>
+    <script src="squat.js"></script>
+    <script src="modal.js"></script>
+</body>
+
+</html>

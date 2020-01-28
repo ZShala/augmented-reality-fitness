@@ -1,60 +1,85 @@
-/* Extra small devices (phones, 600px and down) */
-
-@media only screen and (max-width: 600px) {
-    #imgsquat1 {
-        display: none
+@media only screen and (max-width: 400px) {
+    h1 {
+        margin-top: -50%;
+        font-size: 2vh
     }
     button {
         width: 80%;
-        padding: 5px 0
+        font-size: 0.5vh
     }
-    h1 {
-        margin-top: -25%;
-        font-size: 2vh
-    }
-    #imgsquat2 {
-        display: flex;
-        margin-top: 30%;
-        margin-left: 33%;
-        width: 35%;
-        height: 35%
+    #myBtn {
+        font-size: 0.5vh;
+        margin-top: 90%;
+        margin-left: 20%
     }
 }
 
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-
-@media only screen and (min-width: 600px) and (max-width: 767px) {
-    #imgsquat1 {
-        display: none
+@media only screen and (min-width: 401px) and (max-width: 650px) {
+    h1 {
+        margin-top: -30%;
+        font-size: 2vh
     }
-    #imgsquat2 {
-        display: flex;
-        margin-top: 30%;
-        margin-left: 33%;
-        width: 35%;
-        height: 35%
+    button {
+        width: 80%
     }
+    #myBtn {
+        margin-top: 90%;
+        margin-left: 20%
+    }
+}
+
+@media only screen and (min-width: 651px) and (max-width: 750px) {
     h1 {
         margin-top: -25%;
         font-size: 2vh
     }
     button {
-        width: 80%;
+        width: 80%
+    }
+    #myBtn {
+        margin-top: 90%;
+        margin-left: 20%
     }
 }
 
+@media only screen and (min-width: 751px) and (max-width: 850px) {
+    h1 {
+        margin-top: -20%;
+        font-size: 2vh
+    }
+    button {
+        width: 80%
+    }
+    #myBtn {
+        margin-top: 90%;
+        margin-left: 20%
+    }
+}
 
-/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 851px) and (max-width: 950px) {
+    h1 {
+        margin-top: -20%;
+        font-size: 2vh
+    }
+    button {
+        width: 80%
+    }
+    #myBtn {
+        margin-top: 90%;
+        margin-left: 20%
+    }
+}
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {}
-
-
-/* Large devices (laptops/desktops, 992px and up) */
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {}
-
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 951px) and (max-width: 1100px) {
+    h1 {
+        margin-top: -15%;
+        font-size: 2vh
+    }
+    button {
+        width: 80%
+    }
+    #myBtn {
+        margin-top: 90%;
+        margin-left: 20%
+    }
+}
