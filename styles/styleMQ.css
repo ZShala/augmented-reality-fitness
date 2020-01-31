@@ -7,11 +7,6 @@
         width: 80%;
         font-size: 0.5vh
     }
-    #myBtn {
-        font-size: 0.5vh;
-        margin-top: 90%;
-        margin-left: 20%
-    }
 }
 
 @media only screen and (min-width: 401px) and (max-width: 650px) {
@@ -21,10 +16,6 @@
     }
     button {
         width: 80%
-    }
-    #myBtn {
-        margin-top: 90%;
-        margin-left: 20%
     }
 }
 
@@ -36,10 +27,6 @@
     button {
         width: 80%
     }
-    #myBtn {
-        margin-top: 90%;
-        margin-left: 20%
-    }
 }
 
 @media only screen and (min-width: 751px) and (max-width: 850px) {
@@ -49,10 +36,6 @@
     }
     button {
         width: 80%
-    }
-    #myBtn {
-        margin-top: 90%;
-        margin-left: 20%
     }
 }
 
@@ -64,10 +47,6 @@
     button {
         width: 80%
     }
-    #myBtn {
-        margin-top: 90%;
-        margin-left: 20%
-    }
 }
 
 @media only screen and (min-width: 951px) and (max-width: 1100px) {
@@ -77,9 +56,5 @@
     }
     button {
         width: 80%
-    }
-    #myBtn {
-        margin-top: 90%;
-        margin-left: 20%
     }
 }

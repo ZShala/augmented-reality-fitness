@@ -30,7 +30,7 @@ function draw() {
         let a2 = Math.atan2(dy2, dx2);
         let a = parseInt((a2 - a1) * 180 / Math.PI + 360) % 360;
 
-        if (a >= 315 && a <= 330) {
+        if ((a >= 315 && a <= 330) || (a >= 15 && a <= 40)) {
             for (let i = 0; i < pose.keypoints.length; i++) {
                 let x = pose.keypoints[i].position.x;
                 let y = pose.keypoints[i].position.y;

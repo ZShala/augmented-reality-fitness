@@ -38,7 +38,7 @@ function draw() {
         let a = parseInt((a2 - a1) * 180 / Math.PI + 360) % 360;
         let b = parseInt((b2 - b1) * 180 / Math.PI + 360) % 360;
 
-        if ((a >= 45 && a <= 90) && (b >= 100 && b <= 185)) {
+        if ((a >= 100 && a <= 185) && (b >= 45 && b <= 90)) {
             for (let i = 0; i < pose.keypoints.length; i++) {
                 let x = pose.keypoints[i].position.x;
                 let y = pose.keypoints[i].position.y;
