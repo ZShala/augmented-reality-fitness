@@ -22,15 +22,23 @@ function draw() {
     image(video, 0, 0);
 
     if (pose) {
-        let dx1 = pose.rightShoulder.x - pose.rightElbow.x;
-        let dy1 = pose.rightShoulder.y - pose.rightElbow.y;
-        let dx2 = pose.rightElbow.x - pose.rightWrist.x;
-        let dy2 = pose.rightElbow.y - pose.rightWrist.y;
-        let a1 = Math.atan2(dy1, dx1);
-        let a2 = Math.atan2(dy2, dx2);
-        let a = parseInt((a2 - a1) * 180 / Math.PI + 360) % 360;
+        let rx1 = pose.rightHip.x - pose.rightKnee.x;
+        let ry1 = pose.rightHip.y - pose.rightKnee.y;
+        let rx2 = pose.rightKnee.x - pose.rightAnkle.x;
+        let ry2 = pose.rightKnee.y - pose.rightAnkle.y;
+        let lx1 = pose.leftHip.x - pose.leftKnee.x;
+        let ly1 = pose.leftHip.y - pose.leftKnee.y;
+        let lx2 = pose.leftKnee.x - pose.leftAnkle.x;
+        let ly2 = pose.leftKnee.y - pose.leftAnkle.y;
 
-        if ((a >= 230 && a <= 260) || (a >= 100 && a <= 150)) {
+        let a1 = Math.atan2(ry1, rx1);
+        let a2 = Math.atan2(ry2, rx2);
+        let b1 = Math.atan2(ly1, lx1);
+        let b2 = Math.atan2(ly2, lx2);
+        let a = parseInt((a2 - a1) * 180 / Math.PI);
+        let b = parseInt((b2 - b1) * 180 / Math.PI);
+
+        if ((a >= 100 && a <= 185) && (b >= 45 && b <= 90)) {
             for (let i = 0; i < pose.keypoints.length; i++) {
                 let x = pose.keypoints[i].position.x;
                 let y = pose.keypoints[i].position.y;
